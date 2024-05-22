@@ -1,7 +1,10 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
-}
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+  }
 
 .logo {
   font-size: 48px;
@@ -9,17 +12,42 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+  margin: 10px
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+li {
+  padding: auto;
+  margin: 5px;
+  
 }
 
+.right-links {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  
+}
+.left-links {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
 a {
   font-size: 22px;
   background: white;
-  padding: 8px;
+  padding: 2px;
   /* this removes the line under the links */
   text-decoration: none;
+}
+@media screen and (max-width:600px) {
+  header, nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
 }
